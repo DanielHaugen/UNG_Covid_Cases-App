@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="30dp"
+        tools:context="com.brukernavn.ung_cases.ui.charts.ChartsFragment">
+
+        <TextView
+            android:id="@+id/recentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Confirmed cases in the last 14 days"
+            android:textColor="@color/font"
+            android:textSize="20sp" />
+
+        <TableLayout
+            android:id="@+id/recentTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/locTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Location"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/studTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="Student"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/empTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="Employee"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/caseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="Case Totals"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/CummingLocTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cumming"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/CummingStudTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/CummingEmpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/CummingCaseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/DahLocTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dahlonega"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/DahStudTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/DahEmpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/DahCaseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/GainLocTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gainesville"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/GainStudTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/GainEmpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/GainCaseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/OconLocTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Oconee"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/OconStudTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/OconEmpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/OconCaseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/totalLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Total Cases"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/totalStudTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/totalEmpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/totalCaseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="25dp"
+            android:paddingBottom="10dp"
+            android:text="Confirmed cases since August 1st"
+            android:textColor="@color/font"
+            android:textSize="20sp" />
+
+        <TableLayout
+            android:id="@+id/totalTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/locFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Location"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/studFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="Student"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/empFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="Employee"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/caseFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="Case Totals"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/CummingLocFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cumming"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/CummingStudFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/CummingEmpFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/CummingCaseFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/DahLocFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dahlonega"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/DahStudFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/DahEmpFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/DahCaseFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/GainLocFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gainesville"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/GainStudFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/GainEmpFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/GainCaseFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/OconLocFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Oconee"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/OconStudFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/OconEmpFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/OconCaseFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/totalLabelFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Total Cases"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/totalStudFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/totalEmpFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+                <TextView
+                    android:id="@+id/totalCaseFullTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/font" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/moreResTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_horizontal"
+            android:paddingTop="30dp"
+            android:paddingBottom="20dp"
+            android:text="For More Information and Resources"
+            android:textColor="@color/font"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/resButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:padding="15dp"
+            android:text="More UNG Resources" />
+    </LinearLayout>
+</ScrollView>

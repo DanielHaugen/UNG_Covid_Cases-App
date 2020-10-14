@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/UNGText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="University of North Georgia"
+            android:textColor="@color/font"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/casesText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Confirmed Cases"
+            android:textColor="@color/font"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UNGText" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/casesText">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#88000000"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/dahlonegaConstraint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/dahlonegaTextTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/font"
+                            android:textSize="48sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/dahlonegaText14day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="5dp"
+                            android:text="0"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/red"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaTextTotal" />
+
+                        <ImageView
+                            android:id="@+id/dahlonegaArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:paddingStart="-5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaText14day"
+                            app:srcCompat="@drawable/ic_arrow_up_24" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/dahlonegaText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Dahlonega"
+                        android:textColor="@color/font"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#88000000"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/gainesvilleConstraint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gainesvilleTextTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/font"
+                            android:textSize="48sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/gainesvilleText14day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="5dp"
+                            android:text="0"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/red"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaTextTotal" />
+
+                        <ImageView
+                            android:id="@+id/gainesvilleArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:paddingStart="-5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaText14day"
+                            app:srcCompat="@drawable/ic_arrow_up_24" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/gainesvilleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Gainesville"
+                        android:textColor="@color/font"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#88000000"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/oconeeLinear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/oconeeTextTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/font"
+                            android:textSize="48sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/oconeeText14day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="5dp"
+                            android:text="0"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/red"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaTextTotal" />
+
+                        <ImageView
+                            android:id="@+id/oconeeArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:paddingStart="-5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaText14day"
+                            app:srcCompat="@drawable/ic_arrow_up_24" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/oconeeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Oconee"
+                        android:textColor="@color/font"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#88000000"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/cummingLinear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/cummingTextTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/font"
+                            android:textSize="48sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/cummingText14day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="5dp"
+                            android:text="0"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/red"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaTextTotal" />
+
+                        <ImageView
+                            android:id="@+id/cummingArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:paddingStart="-5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaText14day"
+                            app:srcCompat="@drawable/ic_arrow_up_24" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/cummingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Cumming"
+                        android:textColor="@color/font"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#88000000"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/studentLinear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/studentTextTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/font"
+                            android:textSize="48sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/studentText14day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="5dp"
+                            android:text="0"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/red"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaTextTotal" />
+
+                        <ImageView
+                            android:id="@+id/studentArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:paddingStart="-5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaText14day"
+                            app:srcCompat="@drawable/ic_arrow_up_24" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/studentText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Student"
+                        android:textColor="@color/font"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#88000000"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/employeeLinear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="95dp"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/employeeTextTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="@color/font"
+                            android:textSize="48sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/employeeText14day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="5dp"
+                            android:text="0"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/red"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaTextTotal" />
+
+                        <ImageView
+                            android:id="@+id/employeeArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:paddingStart="-5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/dahlonegaText14day"
+                            app:srcCompat="@drawable/ic_arrow_up_24" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/employeeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Employee"
+                        android:textColor="@color/font"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
