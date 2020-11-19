@@ -1,5 +1,5 @@
 # North Georgia Covid Tracker
-The North Georgia Tracker app provides real-time data and statistics related to confirmed coronavirus cases of students and faculty at each of the University of North Georgia campuses. This app serves to aggregate the provided Covid-19 case statistics and provide a convenient outlet for staying informed on the current statistics at the the University of North Georgia. 
+The North Georgia Tracker app provides real-time data and statistics related to confirmed coronavirus cases of students and faculty at each of the University of North Georgia campuses. This app serves to aggregate the provided Covid-19 case statistics and provide a convenient outlet for staying informed on the current statistics at the University of North Georgia. 
   
 All data and official counts presented within this phone app are sourced from UNG's publicly available Covid-19 resources page: 
 * https://ung.edu/together/managing-covid.php
