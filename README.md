@@ -4,7 +4,7 @@
 </div>
 
 <div align="center">
-  <strong>A Proof-of-Concept MS SQL Server Database structure for Soccer Clubs [College Assignment]</strong>
+  <strong>An Android Application for Tracking Covid-19 University Statistics</strong>
   
   <p align="center">
     <strong>
