@@ -43,4 +43,4 @@ This app was developed within UNG's Mobile App Development course by a group of 
 ## Support
 For additional assistance, comments, or suggestions, please reach out to the developers at:
 <br><br>
-Daniel Haugen - **dlhaug7343@ung.edu**
+**Daniel Haugen**
